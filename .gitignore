@@ -4,5 +4,11 @@
 *.tar.gz
 *~
 .deps/
+/Makefile
 /autom4te.cache/
+/src/Makefile
+/src/dtwmcmd
+config.h
+config.status
 configure.scan
+stamp-h1
