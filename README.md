@@ -1,5 +1,6 @@
 dtwmcmd
 =======
+[![Build Status](https://travis-ci.org/cdesktopenv/dtwmcmd.svg?branch=master)](https://travis-ci.org/cdesktopenv/dtwmcmd)
 
 `dtwmcmd` is a utility which sends `f.*` commands to `dtwm`, the CDE window manager, from the command line or a shell script.
 
