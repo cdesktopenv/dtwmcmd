@@ -1,0 +1,16 @@
+language: c
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+    - os: linux
+      compiler: clang
+addons:
+  apt:
+    packages:
+    - libmotif-dev
+    - libx11-6
+    - libx11-dev
+    - x11proto-core-dev
+script:
+  - ./configure && make && make check
