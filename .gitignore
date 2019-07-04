@@ -1,0 +1,8 @@
+*.log
+*.o
+*.swp
+*.tar.gz
+*~
+.deps/
+/autom4te.cache/
+configure.scan
