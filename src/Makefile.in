@@ -101,9 +101,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_dtwmcmd_OBJECTS = dtwmcmd.$(OBJEXT)
 dtwmcmd_OBJECTS = $(am_dtwmcmd_OBJECTS)
-dtwmcmd_LDADD = $(LDADD)
-dtwmcmd_LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(dtwmcmd_LDFLAGS) \
-	$(LDFLAGS) -o $@
+dtwmcmd_DEPENDENCIES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -254,7 +252,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 dtwmcmd_SOURCES = dtwmcmd.c
-dtwmcmd_LDFLAGS = @X_LIBS@ -lX11
+dtwmcmd_LDADD = @X_LIBS@ -lX11
 all: all-am
 
 .SUFFIXES:
@@ -333,7 +331,7 @@ clean-binPROGRAMS:
 
 dtwmcmd$(EXEEXT): $(dtwmcmd_OBJECTS) $(dtwmcmd_DEPENDENCIES) $(EXTRA_dtwmcmd_DEPENDENCIES) 
 	@rm -f dtwmcmd$(EXEEXT)
-	$(AM_V_CCLD)$(dtwmcmd_LINK) $(dtwmcmd_OBJECTS) $(dtwmcmd_LDADD) $(LIBS)
+	$(AM_V_CCLD)$(LINK) $(dtwmcmd_OBJECTS) $(dtwmcmd_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
