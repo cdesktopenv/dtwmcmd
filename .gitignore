@@ -4,6 +4,7 @@
 *.tar.gz
 *~
 .deps/
+/.idea/
 /Makefile
 /autom4te.cache/
 /src/Makefile
